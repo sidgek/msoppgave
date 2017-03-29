@@ -2,7 +2,7 @@
 
 ## Documentation
 - Create a plan for the report
-- Add a CITATION file in the root directory
+- Add a possible citation to the CITATION file
 
 ## Analysis
 - Include analysis source in a /src folder
