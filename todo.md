@@ -6,7 +6,7 @@
 - Fill in information necessary in the README file
 
 ## Analysis
-- Include analysis Jupyter notebooks in the /src folder
+- Include analysis source code in the /src folder
 
-## Data collection
-- Include Jupyter notebooks used to generate populations in the /src folder
+## Results
+- Add results from analysis to a /results folder
