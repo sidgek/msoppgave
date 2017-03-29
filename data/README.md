@@ -1,0 +1,3 @@
+- **evaluations** contains the survey evaluations used for analysis
+- **accepted\_papers\_\*** contains the accepted papers from each conference
+- **sampled\_\*** contains the sample population for each conference
