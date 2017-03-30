@@ -1,0 +1,11 @@
+- Clarify that experimental and theoretical papers are separated
+- Ranking of methods, not precision&recall/accuracy: how are new results presented
+- Dataset size not that important
+- Paul Cohen -> self evaluation (late 80's)
+- HW is part of documentation
+- Support the claims made, not necessarily the method
+- Shown generality?
+- Point that reproductions are undervalued as papers
+- Hypothesis that years differ -> margin of error if subsamples is not
+
+- Computational Repro.: State of the art, challenges, database research opportunities. Freire, Bonnet, Sasha
