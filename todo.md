@@ -1,5 +1,8 @@
 # TODO
 
+## Evaluation
+- Redo positive_outcome to reflect novel outcomes
+
 ## Documentation
 - Create a plan for the report
 - Add a possible citation to the CITATION file
