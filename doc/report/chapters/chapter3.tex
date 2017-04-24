@@ -1,5 +1,88 @@
 %===================================== CHAP 3 =================================
 
-\chapter{Basic Theory}
+\chapter{Research Method}
+
+\section{Litterature Survey Design}
+
+Advantages of doing a survey
+- Can be replicated on similar documents or on original documents provided the method is shared and documents are accessible
+- Can produce a lot of data at a low cost, in a relatively short time compared to attempting full replications of experiments
+- Allows a larger sample population due to the shorter time necessary to evaluate a paper
+
+Disadvantages
+- The depth is restricted, does not provide detail on the research topic
+- Focuses on what can be counted and measured, other aspects may be overlooked
+
+\subsection{Data requirements}
+Want to investigate the reproducibility of experiments published in papers
+at AI conferences.
+
+/* Explain variables and relate to best practices!!! */
+\begin{description}
+\item[Directly topic related]:
+        Is source code or data open for the experiment and method?
+        Is the method documented?
+        Is the experiment documented?
+        etc.
+\item[Indirectly topic related]
+        Research transparency (hypothesis, predictions...)
+        Author affiliation (uni/industry/both)
+        Novel research?
+        Conference view on supplementary material
+        Theoretical / Experimental research
+
+\end{description}
+
+Possible analysis patterns
+\begin{enumerate}
+    \item reproducibility related to author affiliation
+    \item reproducibility related to conference view on supplementary material?
+    \item reproducibility related to publishing year (improvement over time?)
+
+\end{enumerate}
+
+\subsection{Data generation method}
+Documents, conference papers. (Ch. 16)
+- Existing conference papers, published openly in the proceedings of the conferences. Physical copies can be ordered, but all accepted papers are available on-line.
+
+Advantages:
+- easy to obtain, accessible and are obtained unobtrusively
+- allows later longitudinal studies
+- other researchers can check and scrutinize the research based on original material
+
+Disadvantages:
+-
+
+Sampling frame: accepted papers at IJCAI-13, -16 and AAAI-14 and -16 (can be seen in repo files for sample generation)
+Sampling technique: probabilistic random sampling of each conference separately.
+        "Probability sampling, as its name suggests, means that the sample has been chosen because the researcher believes that there is a high probability that the sample of respondents (or events) chosen are representative of the overall population being studied. That is, they form a representative cross-section of the overall population." Oates p.96
+        Discuss representativeness of sample method.
+
+Sample size: 100 for each conference, restricts the necessary time to conduct the survey while still providing informative accuracy ranges when considering previous research (cite?)
+\begin{table}[!h]
+\begin{center}
+    \begin{tabular}{  l | r  r  r }
+    \textbf{Conference} & \textbf{Population Size} & \textbf{Sample Size} & \textbf{Confidence Interval} \\ \hline
+    AAAI 2014 & 398 & 100 & 8.49 \\
+    AAAI 2016 & 548 & 100 & 8.87 \\
+    IJCAI 2013 & 413 & 100 & 8.54 \\
+    IJCAI 2016 & 551 & 100 & 8.87 \\ \hline
+    Combined & 1910 & 400 & 4.36 \\
+    \end{tabular}
+\end{center}
+\caption{Confidence intervals of survey sample populations given a 50/50  yes/no split with confidence level of 95\%. (\url{https://www.surveysystem.com/sscalc.htm})}
+\label{tab:survey-confidence}
+\end{table}
+
+\section{Evaluation Procedure}
+- Step by step 'instructions'
+- Sampling documentation
+- Evaluation documentation
+- Example evaluations (variable X: "Exhibit A" covers, "Exhibit B" is not enough)
+
+\section{Limitations of the Survey}
+- Evaluation bias (modification of variables)
+- Sample inconsistency for IJCAI-13 (~50 papers)
+- Not an actual attempt at reproducing experiments, researcher's view that discussion of a variable is missing?
 
 \cleardoublepage
