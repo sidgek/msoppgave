@@ -2,112 +2,34 @@
 
 \chapter{Introduction}
 
-\section{Equations}
+\section{Background, Motivation and Problem Outline}
+\section{Research Context}
+The research was conducted as my Master's thesis at the department of Computer and Information Science at the Norwegian University of Science and Technology. The research task was formulated by Odd Erik Gundersen, my supervisor, and is a continuation of previous work by \citet{3dor.20151059} presented at 3DOR2015\footnote{\url{http://vc.ee.duth.gr/3DOR2015/}}.
 
-To write an equation
+\section{Hypothesis, Objectives and Research Questions}
+Underlying this thesis is the hypothesis that; \textit{the documentation provided in experimental publications at AI conferences is not good enough to consider the experiments reproducible.}
 
-\begin{verbatim}
-\begin{eqnarray}\label{eq1}
-F = m \times a
-\end{eqnarray}
-\end{verbatim}
+\begin{description}
+    \item[Objective 1] \textit{Evaluate the reproducibility of accepted papers to AI conferences.}
+        \begin{description}
+            \item[RQ1] What is the state of reproducibility at AI conferences?
+        \end{description}
+    \item[Objective 2] \textit{Recommend practices that could be adopted to aid the reproducibility of conference papers.}
+        \begin{description}
+            \item[RQ2] What is generally missing from AI papers to support reproducibility?
+            \item[RQ3] What can ease the documentation of missing information from conference papers?
+        \end{description}
+\end{description}
 
-\noindent This will produce
+\section{Research Approach}
+\section{Research Contributions}
 
-\begin{eqnarray}\label{eq1}
-F = m \times a
-\end{eqnarray}
+\begin{description}
+    \item[C1:] \textbf{A survey of experimental research papers from AI conferences.}
+    \item[C2:] \textbf{An indication of the state of reproducibility at AI conferences.}
+    \item[C3:] \textbf{An approach to measure the reproducibility of AI conference papers.}
+\end{description}
 
-\noindent To refer to the equation
-
-\begin{verbatim}
-\eqref{eq1}
-\end{verbatim}
-
-\noindent This will produce \eqref{eq1}.
-
-
-\section{Figures}
-To create a figure
-
-\begin{verbatim}
-\begin{figure}[h!]
-  \centering
-    \includegraphics[width=0.5\textwidth]{fig/pikachu}
-  \caption{Pikachu.}
-\label{fig1}
-\end{figure}
-\end{verbatim}
-
-\begin{figure}[h!]
-  \centering
-    \includegraphics[width=0.5\textwidth]{fig/pikachu}
- \caption{Pikachu.}
-\label{fig1}
-\end{figure}
-
-\noindent To refer to the figure
-
-\begin{verbatim}
-\textbf{Fig. \ref{fig1}}
-\end{verbatim}
-
-\noindent This will produce \textbf{Fig. \ref{fig1}}
-
-\section{References}
-
-To cite references
-
-\begin{verbatim}
-\cite{1,2,3}
-\end{verbatim}
-or
-\begin{verbatim}
-\citep{1,2,3}
-\end{verbatim}
-
-\noindent This will produce: \cite{1,2,3} or \citep{1,2,3}, respectively.
-
-\section{Tables}
-
-To creat a table
-
-\begin{verbatim}
-\begin{table}[!h]
-\begin{center}
-    \begin{tabular}{ | l | l | l | l |}
-    \hline
-    \textbf{No.} & \textbf{Data 1} & \textbf{Data 2} \\ \hline
-     1 & a1 & b1 \\ \hline
-     2 & a2 & b2 \\ \hline
-    \end{tabular}
-\end{center}
-\caption{Table 1.}
-\label{Tab1}
-\end{table}
-\end{verbatim}
-
-\noindent This will produce
-
-\begin{table}[!h]
-\begin{center}
-    \begin{tabular}{ | l | l | l | l |}
-    \hline
-    \textbf{No.} & \textbf{Data 1} & \textbf{Data 2} \\ \hline
-     1 & a1 & b1 \\ \hline
-     2 & a2 & b2 \\ \hline
-    \end{tabular}
-\end{center}
-\caption{Table 1.}
-\label{Tab1}
-\end{table}
-
-\noindent To refer to the table
-
-\begin{verbatim}
-\textbf{Table. \ref{Tab1}}
-\end{verbatim}
-
-\noindent This will produce \textbf{Table. \ref{Tab1}}.
+\section{Thesis Structure}
 
 \cleardoublepage
