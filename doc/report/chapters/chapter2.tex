@@ -2,26 +2,73 @@
 
 \chapter{Literature Review}
 \section{Reproducibility Terminology}
+
+### Fehr 2016  Best Practices for Replicability, Reproducibility and Reusability of Computer-Based Experiments Exemplified by Model Reduction Software: https://arxiv.org/abs/1607.01191
+
+
+Peng (2006): https://doi.org/10.1093/aje/kwj093
+"Scientific evidence is strengthened when important findings are replicated by multiple independent investigators using independent data, analytical methods, laboratories, and instruments."
+"An attainable minimum standard is reproducibility, where independent investigators subject the original data to their own analyses and interpretations. Reproducibility calls for data sets and software to be made available for 1) verifying published findings, 2) conducting alternative analyses of the same data, 3) eliminating uninformed criticisms that do not stand up to existing data, and 4) expediting the interchange of ideas among investigators."
+
+Claebout (1992): http://dx.doi.org/10.1190/1.1822162
+
+- Thompson and Burnett (2012): https://nationalethicscenter.org/content/article/175
 - Stodden
 - Goodman
 - Drummond
+- Recomputation manifesto? (Gent 2013)
+
+\section{Criteria for reproducible research}
+
+### Fehr 2016  Best Practices for Replicability, Reproducibility and Reusability of Computer-Based Experiments Exemplified by Model Reduction Software: https://arxiv.org/abs/1607.01191
+
+\subsection{Focus on recreating figures}
+Peng (2006): https://doi.org/10.1093/aje/kwj093
+"Reproducibility is a minimum step that can be taken in any study. In the context of epidemiology, a study is reproducible when it satisfies the criteria in table 1, adapted from the paper by Schwab et al. (7) and others. We illustrate reproducibility requirements separately for each of the following research components: data, methods, documentation, and distribution."
+"Table 1: Research component 	Requirement
+Data 	Analytical data set is available.
+Methods 	Computer code underlying figures, tables, and other principal results is made available in a human-readable form. In addition, the software environment necessary to execute that code is available.
+Documentation 	Adequate documentation of the computer code, software environment, and analytical data set is available to enable others to repeat the analyses and to conduct other similar ones.
+Distribution 	Standard methods of distribution are used for others to access the software, data, and documentation."
+
+Schwab (2000) Making scientific computations reproducible (ReDoc): http://dx.doi.org/10.1109/5992.881708
+"Conditionally reproducible result files that require proprietary data, licensed software, or more than 10 minutes for recomputation. The author nevertheless supplies a complete set of source files; this ensures that readers can reproduce the results if they possess the necessary resources"
+
+\subsection{Computational Experiments}
+Laine (2007): DOI: 10.7326/0003-4819-146-6-200703200-00154
+"Reproducibility involves methods to ensure that independent scientists can reproduce published results by using the same procedures and data as the original investigators. It also requires that the primary investigators share their data and methodological details. These include, at a minimum, the original protocol, the dataset used for the analysis, and the computer code used to produce the results."
+
+Hutton (2015):  Towards reproducibility in online social network research https://doi.org/10.1109/TETC.2015.2458574
+""
+
 \section{Best Practices for Reproducibility}
-- Gent (Recomputation manifesto)
+
+### - Stodden & Miguez 2014: http://doi.org/10.5334/jors.ay
+### - Stodden, Donaho++ 2009: https://doi.org/10.1109/MCSE.2009.15
+### - Sandve et al (Ten simple rules) \url{http://dx.doi.org/10.1371/journal.pcbi.1003285}
+### Davison (2012): http://rrcns.readthedocs.io/en/cns2012/index.html
+
 - (LeVeque? Top ten reasons to not share code)
-- Sandve et al (Ten simple rules) \url{http://dx.doi.org/10.1371/journal.pcbi.1003285}
 - Yilmaz 2012
-- Stodden & Miguez 2014
 - Collberg & Proebsting 2016
-- Claergbout 1992
+- Claerbout 1992
 - Casadevall 2011
 - Buckheit 1995
 - Brown 2012
 
 \section{Reproducibility in Practice}
+
+The Recomputation Manifesto (Gent 2013)
+Six theses; 1. Computational experiments should be recomputable for all time. 2. Recomputation of recomputable experiments should be very easy. 3. It should be easier to make experiments recomputable than not to. 4. Tools and repositories can help recomputation become standard. 5. The only way to ensure recomputability is to provide virtual machines. 6. Runtime performance is a secondary issue.
+
 - Hunold (& Träff)
 - Kluyver (Jupyer notebooks)
 - Leitner (acrv picking benchmark)
 - See spec. project
+
+BioCatalogue: a catalogue of services for biological evaluation and analysis, displays availability of endpoint to the service as well. (https://nationalethicscenter.org/content/article/175)
+
+
 \section{Observations}
 
 \cleardoublepage
