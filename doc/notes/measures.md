@@ -13,7 +13,7 @@
 - http://www2.ncrn.cornell.edu/ced2ar-web/search
 
 ## Self-correction
-- Self-correction in science at work http://science.sciencemag.org/content/348/6242/1420.full Incentives for quality > quantity. Incentives for correction/withdrawal > retraction. Increase clarity and quality of editorial response in peer-review: share comments between reviewers and collaborate on a response to the author with the editorial decision (used by eLife), cross-review where reviews are exchanged bwetween reviewers allows editors to capture input on reviews before returning them to authors (Science). Timely, unbiased investigation of allegations of misconduct/fraud. "Adopting more neutral language such as “disclosure of relevant relationships” [instead of "conflict of interest"] may encourage more complete compliance without implying that all disclosed associations are sinister."
+- Self-correction in science at work http://science.sciencemag.org/content/348/6242/1420.full Incentives for quality > quantity. Incentives for correction/withdrawal > retraction. Increase clarity and quality of editorial response in peer-review: share comments between reviewers and collaborate on a response to the author with the editorial decision (used by eLife), cross-review where reviews are exchanged between reviewers allows editors to capture input on reviews before returning them to authors (Science). Timely, unbiased investigation of allegations of misconduct/fraud. "Adopting more neutral language such as “disclosure of relevant relationships” [instead of "conflict of interest"] may encourage more complete compliance without implying that all disclosed associations are sinister."
 
 ## Code-review
 - Code Review For and By Scientists https://arxiv.org/pdf/1407.5648v2.pdf
