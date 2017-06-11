@@ -7,6 +7,7 @@
 \input{docsetup.tex}
 \usepackage{subcaption}
 \usepackage{pdfpages}
+\usepackage{lmodern}
 \graphicspath{ {fig/} } 
 
 \begin{document}
@@ -16,10 +17,24 @@
 
 %% PART 2
 \input{chapters/abstract.tex}		%% Optional
-\input{chapters/preface.tex}		%% Optional
 \input{chapters/acknowledgements.tex}		%% Optional
 \input{list.tex}			%% Generate TOC, list of tables, and list of figures automatically
-\input{chapters/abbreviations.tex}	%% Optional
+
+\cleardoublepage
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\chaptermark}[1]{\markboth{\chaptername\ \thechapter.\ #1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+\renewcommand{\headrulewidth}{0.1ex}
+\renewcommand{\footrulewidth}{0.1ex}
+\fancyfoot[LE,RO]{\thepage}
+\fancyhead[LE]{\leftmark}
+\fancyhead[RO]{\rightmark}
+\fancypagestyle{plain}{\fancyhf{}\fancyfoot[LE,RO]{\thepage}\renewcommand{\headrulewidth}{0ex}}
+
+\pagenumbering{arabic} 				
+\setcounter{page}{1}
 
 %% PART 3 -- The Chapters
 \input{chapters/chapter1.tex}		%% Edit each chapter
