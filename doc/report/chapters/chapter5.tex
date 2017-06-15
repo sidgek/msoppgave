@@ -1,15 +1,82 @@
 %===================================== CHAP 5 =================================
 
-\chapter{Discussion}
+\chapter{Evaluation}
+\label{chap:evaluation}
+This chapter evaluates the conducted research by examining the research questions in light of the evidence found. A closer look at measures to improve the state of reproducibility is also presented.
 
-Of note: among the IJCAI 2013 papers previously examined by \cite{Gundersen2015}, two of the papers were found to have references to supplementary material which were no longer available. Suggesting that the availability and ease of use for scientific repositories for source code or data is important.
+\section{Research Questions Revisited}
+\label{sec:revisit-rq}
+In this section the research questions are revisited in turn. Each question will be examined in turn, following a repetition of the question being discussed.\\
 
-Anonymous publication of source code and data along with papers (blind review)
+\textbf{RQ1:} \emph{What is the state of reproducibility at AI conferences?}
 
-Hunold and Träff 2013: Add a description of how to reproduce the findings in a publication
+This question is central to evaluate the rest of the research questions and is the basis for the design of the survey conducted. An answer first needs to consider what is meant by reproducibility, and how to measure its state. The definition of reproducibility is covered by \cite{Goodman341ps12}, and the survey was designed to cover methods and results reproducibility. While results reproducibility requires experiment and method source code, methods reproducibility additionally requires the data used. Section~\ref{sec:reproducibility-results} highlights the relevant data from the survey, resulting in 3.1\% methods reproducible and 5.2\% results reproducible papers. The values are dismal compared to the 33.4\% reported for the ACM conferences covered by \cite{Collberg2016} with no contact with authors. It is first and foremost a result of few papers making code available. Note that results data was not included in the methods reproducible definition, which would reduce it further. This choice was based on a focus on similar or supporting results, rather than identical, since certain experiments might not be deterministic. Results data have been shown to help when differences occur in reproduction, to find the underlying causes \citep{fokkens2013offspring}.\\
 
-[Citation needed] attempt to run experiments from computer conferences with contact with authors.
+\textbf{RQ2:} \emph{What documentation is missing from AI papers to support reproducibility?}
 
-ACM TOMS: Independent replication review http://toms.acm.org/replicated-computational-results.cfm
+Textual documentation practices are for the most part decent, but could see more explicit mentions of resources used in cases of hardware specification and software dependencies, providing readers an indication of the resources necessary to attempt a reproduction. Additionally, more precise information on dataset splits should be encouraged. However, there are three practices related to open code and data with particularly low values. In increasing order, they are: results data (3.7\%), open experiment code (5.5\%), and open source code (8.0\%). Results data generally goes hand in hand with open source and experiment code, as it is common to see code repositories containing example data and results. Taking the additional work necessary to make one of the three available, can often lead to all three being made available with minimal extra effort. If the rate of open code was similar to open data, the state would be a little behind the 33.4\% reported by \cite{Collberg2016} for ACM conferences.\\
+
+\textbf{RQ3} \emph{What practices have seen an improvement in recent years?}
+
+There is no observable improvement from the earlier instalments to the later. The frequencies recorded for the later instalments are slightly higher, but not high enough to make confident claims considering the confidence intervals. For a closer look at the data, refer to table~\ref{tab:pattern-conferences}.\\
+
+\textbf{RQ4:} \emph{What practices are encouraging reproducible research in AI?}
+
+This research question is difficult to answer through the survey data gathered, considering the lack of improvement observed in the previous research question. However, the use of publicly available datasets and benchmarks for comparisons of performance is still encouraging.\\
+
+\textbf{RQ5:} \emph{What incentives could be implemented to further encourage reproducible research?}
+
+Incentives to encourage reproducible research should focus on making code available, as evidenced by the missing documentation mentioned in RQ2. As a bonus, some measures to improve code availability are also likely to facilitate sharing of data. Possible incentives and measures are discussed in section~\ref{sec:incentives}, and cover: making adapted good-enough practices; requiring a sharing contract for data, code, and support; requiring a guide on how to reproduce the experiment; providing a sharing platform in line with the double blind-review process; and introducing a voluntary reproduction review for accepted papers. The different possibilities range from little complexity and cost such as the sharing contract, to more complex, time consuming measures such as a reproduction review. As a minimum, IJCAI should stop discouraging authors to include links to supplemental material\footnote{\url{http://ijcai-17.org/FAQ.html\#q9}}.\\
+
+\textbf{RQ6:} \emph{Does the author affiliation impact documentation practices?}
+
+This is not conclusively answered by the survey conducted. With the bad practices overall for code sharing, there is little data to answer the question. Yet, the practices for open data indicate a slight decrease in availability for collaborative and industry affiliated authors. An hypothesis for why academia affiliated papers have slightly more open data is that collaboration allows access to private datasets which are unlikely to be published openly, potentially for legal reasons to keep an industry advantage. The question would be better answered by the approach of \cite{Collberg2016}, where communication with authors is included in the survey. Attempting to receive data and code by contacting authors for reproduction may give more evidence for this hypothesis.
+
+\section{Encouraging Reproducible Research}
+\label{sec:incentives}
+Five recommended steps to encourage reproducible research at the investigated conference series are mentioned here. Each one is examined in turn, ranging from what is considered less complicated or time consuming, to more complex and time consuming measures. All of the approaches require work from authors and from the conference committee. The focus is on increased sharing of code. Some of the approaches will have the side-effect of increased sharing of data as well, or better textual documentation of experiments.
+
+\subsection{Sharing Contract}
+A sharing contract, or specification, is an explicit statement of the authors' intent to share open data, open code, and support peers who wish to examine the underlying experiment of the findings presented. It creates a contract which determines what readers can expect from the authors. It does not require all papers to publish data or code, but makes the reader more aware and potentially more sceptical when it is not shared. The contract, as introduced by \cite{Collberg2016}, is concise and contains the following information: location of resources and/or a contact email; external resources backing up the results, such as code, data, and media; and the level of technical support. For each resource, it specifies the accessibility, cost, and the form of the resource (e.g. source, binary, executable, as a service, sanitized). The support should state if it will be for bug fixes, installation, the cost, and a deadline for when it might no longer be available. An example contract for this thesis is included here.
+
+\begin{description}
+\item[Location:] \url{https://github.com/sidgek/msoppgave}, \href{mailto:sigbjokj@stud.ntnu.no}{\nolinkurl{sigbjokj@stud.ntnu.no}}
+\item[Code:] access, free, source
+\item[Data:] access, free
+\item[Support:] bug fixes, free, 2018-01-01
+\end{description}
+
+\subsection{How-to Reproduce Guide}
+As mentioned by \cite{hunold2013state} and exemplified by \cite{dolfi2014model}, including a detailed description of how to reproduce the findings of a paper would be beneficial. Such a guide presupposes that the code and data is already available, but give a specific description of the steps taken to run an experiment and analyse the data. While \cite{dolfi2014model} append it as an appendix to the original paper, publishing it as supplemental material along the original paper can be a middle-ground for conferences with strict page limits. Even without code or data, publishing more detailed descriptions of experiments as supplemental material may still be a step in the right direction, allowing readers with a special interest to evaluate the design of the experiment more closely.
+
+\subsection{Publish Supplemental Materials}
+The AAAI conference series allows authors to upload supplemental material\footnote{\url{http://www.aaai.org/Conferences/AAAI/2017/aaai17call.php}}, specifying that it will not be reviewed. This is generally used for extended proofs, but could be used to encourage sharing of more resources. IJCAI would have to start such an implementation from scratch, as well as reverse their current practice of discouraging links to such material. The main issues stated are the need for papers to be self-contained and the blind peer-review. For the first issue, the current peer-review process should be enough to keep that requirement. For the second, encouraging addition after acceptance or not making the uploaded supplemental material available to reviewers before acceptance are two possible approaches. If the storage space necessary becomes a problem, exploring scientific repositories meant for data and code, and utilising them is also an option. Either way, it could limit the issue of links becoming dormant, which was the case for a couple of the papers from IJCAI 2013 previously recorded by \cite{Gundersen2015} to have external resources available. Digital Object Identifiers for the supplemental materials would be a welcome bonus as well.
+
+\subsection{Good-enough Practices}
+A long term goal should be to create some good-enough practices as a guide to reproducible research within AI. As inspiration, \cite{stodden2014best-practices}, \cite{WilsonBCKNT16} and \cite{Sandve_2013}, are all good examples, and cover important parts of the research process. This approach would require educating researchers on the practices, which is likely to take a long time. Additionally, the practices should be adapted over time as new tools, and the adoption increases, potentially making the bar for good-enough practices higher over time.
+
+\subsection{Voluntary Reproduction Review}
+Including an optional reproduction review for accepted papers is likely the most time consuming, but also the most rewarding suggestion. ACM has had significant focus on reproducibility in recent years \citep{Boisvert:2016}, and SIGMOD has been a pioneer with their introduction of a reproduction review in 2008. Several other ACM conferences followed suit, and in 2015 the \emph{ACM Transactions on Mathematical Software}(TOMS) journal began a similar initiative. Successful reviews lead to increased recognition at the conferences, and prizes for excellence. For the TOMS Initiative and Policies for Replicated Computational Results\footnote{\url{http://toms.acm.org/replicated-computational-results.cfm}}, replication is done by an independent reviewer working together with the authors if the authors opt in after acceptance. The review process lead to a review report accompanying the paper, and the reviewer being acknowledged in the published paper as the author of the report. The additional exposure is an incentive for authors to commit to the review, while the acknowledgement of reviewers reward their work and effort. An implementation for AAAI or IJCAI can learn from the experience of these implementations, while also increase publication of reproduction attempts.
+
+\cleardoublepage
+
+\chapter{Conclusion and Future Work}
+This chapter concludes the research, revisits the hypothesis and summarises the proposed measures to improve reproducibility. A list of proposed future work ends the chapter.
+
+\section{Conclusion}
+This thesis sought an overview of documentation practices for reproducible research at two AI conference series. A total of 400 papers were surveyed, split equally between two instalments of two conference series, recording the availability of code, data, and documentation of experiments. We hypothesized that the documentation of experiments is not good enough to consider papers reproducible, and that documentation practices have improved in recent years. The main drivers for reproducible research were determined to be open code and open data, with open code being required for results reproducibility and both being required for methods reproducibility.
+
+The evidence supports the first hypothesis, but there is little evidence to support the second. None of the conference instalments have code or data policies, but the IJCAI instalments discouraged links to supplemental material and the AAAI instalments allowed uploading of supplemental material not in conflict with the blind peer-review. Surprisingly, there is no observable difference in availability of code or data between the conference series or when comparing the instalments within a conference series. About a third of the papers make data available, usually by using available open datasets, but some fail to document splitting of data. For code, only 5.5\% make the experiment code available, while 8\% make their methods source code available. Due to the low availability of source code, the reported amount of papers covering methods reproducibility and results reproducibility are 3.1\% and 5.2\% respectively.
+
+Among the suggested ways to improve reproducibility, establishing some best-, or good-enough, practices for how to conduct reproducible AI research, and implementing a voluntary reproduction review for future conference instalments should be a priority. Both allow the community to contribute, and the voluntary choice for a reproduction review makes it forgiveable during an introduction period.
+
+\section{Future Work}
+The following list contain topics for proposed future work:
+\begin{description}
+\item[Survey Specification:] Improve the specification of the survey, to reduce the subjectivity of certain variables. This is especially relevant for experiment set-up, evaluation criteria, and software dependencies. Additionally, dataset availability should be evaluated as a whole, with documentation of dataset use as a separate variable instead of the division into three variables for training, validation and test data.
+\item[Expand Evidence:] Evaluating future instalments of the conference series can measure the effect of new policies for documentation. While evaluation of other conference series or journals could provide evidence of what policies improve reproducibility, assuming policies differ.
+\item[Sharing Policies:] Examine and evaluate policies adopted by other conference series and journals, both within AI and related computational research. The reproduction review processes for SIGMOD\footnote{SIGMOD Reproducibility: \url{http://db-reproducibility.seas.harvard.edu/}} and TOMS\footnote{The TOMS Initiative and Policies for Replicated Computational Results: \url{http://toms.acm.org/replicated-computational-results.cfm}} are good starting points.
+\item[Reproduction Study:] An in depth attempt at reproduction would provide a clear indication of what information is necessary for each paper and potentially the motives behind sharing or not. Two previous approaches are of note, the extensive reproduction projects at Open Science Framework \cite{aarts2016, Errington2017}, and the simpler attempt at running experiment code from \cite{Collberg2016}.
+\end{description}
 
 \cleardoublepage

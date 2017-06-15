@@ -1,20 +1,18 @@
 # Reproducibility in AI Research
 
 ## Intro
-
-[//]: # (Brief description of project and purpose)
-
-## Immediate Goals
+The task is to review AI research in top conferences and document whether it is possible to reproduce the research using the information in the published papers alone.
 
 ## How to Run the Analysis
+The analysis and sample selection code is contained in iPython Jupyter notebooks. Refer to Jupyter project to install Jupyter notebook. The files should be runnable by starting Jupyter notebook and navigating to the src folder in this project. The packages used when running the analysis are stated at the top of the analysis notebook. For the sample selection code, it should be apparent by checking the imports, sadly it was run without noting the version numbers.
 
 ## Overview
-
-[//]: # (Overview of project structure)
+Source files can be found under the src directory.  
+Any data used or generated can be found in the data directory.  
+The figures saved by the analysis notebook are saved in doc/report/fig due to the project being written in LaTeX in the same directory structure. They should also be viewable by opening the analysis notebook.
 
 ## Contact Info
-
-[//]: # (Contact info)
+Sigbjørn Kjensmo: sigbjokj@stud.ntnu.no
 
 ## License
 

@@ -2,42 +2,92 @@
 
 \chapter{Introduction}
 
-This chapter introduces the research performed and its results.
-
-\section{Background and Motivation}
+An introduction to the research topic, the hypotheses posited, the research methodology and what contributions the thesis provides is presented in this chapter.
 
 \section{Background, Motivation and Problem Outline}
+The motivation for this thesis is increased discussions of how a large amount of published research cannot be reproduced, even in the prestigious journals and by the original authors \citep{aarts2016, begley2012drug, begley2015reproducibility, prinz2011believe}. Data from Scopus, as presented in\cite{Goodman341ps12}, show that the discussion spans several scientific fields, although medical sciences are most involved. Within computational science, \cite{peng2011reproducible} states that \emph{"the biggest barrier to reproducible research is the lack of a deeply ingrained culture that simply requires reproducibility for all scientific claims"}. The scientific method is built upon experiments being repeated so produced results can be confirmed and hypothesis verified, \emph{"if other researchers can't repeat an experiment and get the same result as the original researchers, then they refute the hypothesis"} \citep[p.~285]{oates2006}. If reproduction or validation of the methods used in a published experiment cannot be done, a key element of the scientific method is missing, and the trust in the publication deteriorates.
+
+For preclinical medical research, large scale case studies have shown that a significant portion of published experiments are difficult to reproduce \citep{begley2012drug, begley2015reproducibility, prinz2011believe}. For computer science and artificial intelligence (AI), experiments reproducing a few papers \citep{hunold2013state, fokkens2013offspring}, and surveys of researchers' experience with reproduction \citep{hunold2015survey} report similar difficulties. \cite{Collberg2016} finds that some researchers are not willing to share code and data, while many of those that do provide too little to reproduce. Some proposed solutions and platforms developed to facilitate reproducibility see little adoption with low ease-of-use or considerable time investments necessary to retroactively fit an experiment to them \citep{gent2014recomputation}. An increasing availability of such tools is still encouraging.
+
+Previous reproduction experiments and the work on guidelines and best-practices for reproducible research \citep{Sandve_2013, stodden2014best-practices} provide insight into what is necessary for reproduction. As does solutions developed to aide reproducibility, which mainly point towards open data and open source code. Our goal is to quantify the state of reproducibility at AI conferences, and find the areas of documentation that improvements in practices would most impact reproducibility.
+
 \section{Research Context}
-The research was conducted as my Master's thesis at the department of Computer and Information Science at the Norwegian University of Science and Technology. The research task was formulated by Odd Erik Gundersen, my supervisor, and is a continuation of previous work by \citet{Gundersen2015} presented at 3DOR2015\footnote{\url{http://vc.ee.duth.gr/3DOR2015/}}.
+The research was conducted as my Master's thesis in the spring semester of 2017, at the department of Computer and Information Science at the Norwegian University of Science and Technology. The research task was formulated by Odd Erik Gundersen, my supervisor, and is a continuation of a specialization project during fall of 2016. Previous work by \cite{Gundersen2015} presented at 3DOR2015\footnote{\url{http://vc.ee.duth.gr/3DOR2015/}} has influenced the research.
 
-\section{Hypothesis, Objectives and Research Questions}
-Underlying this thesis is the hypothesis that; \textit{the documentation provided in experimental publications at AI conferences is not good enough to consider the experiments reproducible.}
-
+\section{Hypothesis and Research Questions}
+Two hypotheses underlie the research in this thesis:
 \begin{description}
-    \item[Objective 1] \textit{Evaluate the reproducibility of accepted papers to AI conferences.}
-        \begin{description}
-            \item[RQ1] What is the state of reproducibility at AI conferences?
-        \end{description}
-    \item[Objective 2] \textit{Recommend practices that could be adopted to aid the reproducibility of conference papers.}
-        \begin{description}
-            \item[RQ2] What is generally missing from AI papers to support reproducibility?
-            \item[RQ3] What can ease the documentation of missing information from conference papers?
-        \end{description}
+\item[HYP1:] \emph{the documentation of experiments in publications at AI conferences is not good enough to consider the experiments reproducible.}
+\item[HYP2:] \emph{the documentation practices have improved in recent years.}
 \end{description}
 
-\section{Research Approach}
+The following research questions were formulated to investigate these hypotheses:
+\begin{description}
+\item[RQ1:] What is the state of reproducibility at AI conferences?
+\item[RQ2:] What documentation is missing from AI papers to support reproducibility?
+\item[RQ3:] Which practices have seen an improvement in recent years?
+\item[RQ4:] What practices are encouraging reproducible research in AI?
+\item[RQ5:] What incentives could be implemented to further encourage reproducible research?
+\item[RQ6:] Does the author affiliation impact documentation practices?
+\end{description}
+
+All six research questions attempt to answer different aspects of the first hypothesis. RQ4 specifically examines the second hypothesis. Affiliation with industry have indicated a lower rate of reproducibility in studies of other research areas \citep{Collberg2016}, leading to the last research question, RQ6. To examine RQ4, what is encouraging reproducible research, the results of RQ3 are be necessary. As for RQ5, the results of RQ2 are essential to focus the suggested incentives.
+
 \section{Research Contributions}
+The following list is a short summary of the contributions contained in this thesis.
 
-"We examine the common practices and challenges we
-see  in  recent  OSN  research,  from  which  we  propose
-a  set  of  recommendations  for  the  benefit  of  OSN
-researchers in all disciplines."
 \begin{description}
-    \item[C1:] \textbf{A survey of experimental research papers from AI conferences.}
-    \item[C2:] \textbf{An indication of the state of reproducibility at AI conferences.}
-    \item[C3:] \textbf{An approach to measure the reproducibility of AI conference papers.}
+    \item[C1:] \emph{A survey design for evaluating documentation of experiments in AI research papers.}
+    The survey design includes a description of the procedure taken to evaluate experiment documentation. Its documentation provides the means for other researchers to evaluate the results, as well as evaluating other conferences to compare documentation practices, or a future longitudinal study. The evaluation procedure is presented in section~\ref{sec:evaluation-procedure}.
+    \item[C2:] \emph{An evaluation of the state of reproducibility at two leading AI conference series.}
+    This contribution is linked to RQ1 through RQ4, and RQ6. The evaluation gives an idea of what documentation practices are present at the investigated conferences, as well as shining a light on what documentation is missing to guide the approach to RQ5. Refer to chapter~\ref{chap:results} for a presentation of the results, and to section~\ref{sec:revisit-rq} for a revisit of the research questions.
+    \item[C3:] \emph{Suggested incentives to increase reproducibility of AI research.}
+    The incentives are aimed at the problem areas discovered through the evaluation, and thereby depend on C2 to answer RQ5. Several proponents of reproducible research are careful with recommending hard requirements, to avoid increasing peer-review time and to not exclude experiments where it might be impractical, such as when legal issues hinder sharing of data. Thus, the incentives suggested attempt to provide best-practices, or reward reproducible research. See section~\ref{sec:incentives} for further discussion.
 \end{description}
+
+\section{Research Methodology}
+The following section provides an overview of the methodology used when conducting the research for this thesis. The literature review giving an overview of topics relevant to the thesis is covered first. Following is the survey design, data generation and analysis.
+
+\subsection{Literature Review}
+The literature review serves as an overview of relevant work and an introduction to research on reproduction. The discussion of reproducible research spans several fields, so some sources will be from fields quite different from AI. The study attempts to focus on sources relevant to AI, but includes important related studies from fields such as biomedical research and psychology. Not all the sources have been published in reputable journals or at conferences, such as those from arXiv\footnote{\url{https://arxiv.org/}}. These have been included due to featuring often in related work from reputable publishers. Content from web pages have been avoided when possible, since the content may change over time.
+
+The search for literature was based on queries with combinations of the following keywords: reproducible research, replication, repeatability, reproducibility, and computational. Queries began through the ACM Digital Library\footnote{\url{http://www.acm.org/dl/}}, Computer Science bibliography\footnote{\url{http://dblp.org/}}, and IEEE Xplore Digital Library\footnote{\url{http://ieeexplore.ieee.org/Xplore/home.jsp}}. The reference list included in publications from reputable journals and conferences were also included to explore relevant research.
+
+Literature matching the queries made were examined to determine its relevance and quality. First, First, the abstract was examined to find the aim of the presented research and establish its relevancy for the thesis. If it is deemed relevant, and the study is cited by other researchers, its methodology was considered. If the presented methodology was found reasonable, for instance by the sample size used, the full publication was studied.
+
+\subsection{Data Generation}
+A survey of conference publications was used to answer the suggested hypotheses. To answer the first hypothesis on the state of reproducibility, a requirement is to cover a large amount of the conferences examined. Thus, a survey of the publications, rather than reproduction attempts, was deemed appropriate to cover a large enough sample. A probabilistic random sampling of the accepted papers was performed to generate a representable sample from a population of conferences covering similar topics and of similar recognition.
+
+Chapter~\ref{chap:survey-design} covers the survey design in more depth, describing the requirements, data recorded, sampling and evaluation procedure.
+
+\subsection{Data Analysis}
+The data resulting from the survey was originally recorded in a Google Spreadsheet. To conduct the analysis, it was exported to a csv format, and examined through Python scripts included in the Appendix. Frequencies of all data recorded is reported in chapter~\ref{chap:results}, with additional patterns of analysis related to affiliation, publishing conference, and defined terms for reproducibility at the end of the chapter. Chapter~\ref{chap:evaluation} discuss the results of the survey and attempt to answer the investigated research questions.
 
 \section{Thesis Structure}
+The chapters in this thesis are divided into four parts. First, in chapter 1 and 2 the research context is presented with the introduction of the thesis, background information, and the state of the art in related topics. Second, chapter 3 and 4 present the results of the research with the survey design and its results. Third, evaluation, conclusion and future work is presented in chapter 5 and 6. Last, the appendices contain an abbreviated sample of the data, and scripts used throughout the research.
+
+\begin{description}
+\item[Part I:] \textbf{Research Context}
+    \begin{description}
+    \item[Chapter 1:] \textbf{Introduction}
+    \item[Chapter 2:] \textbf{State of the Art}
+    \end{description}
+\item[Part II:] \textbf{Research Results}
+    \begin{description}
+    \item[Chapter 3:] \textbf{Research Method}
+    \item[Chapter 4:] \textbf{Results and Analysis}
+    \end{description}
+\item[Part III:] \textbf{Evaluation and Conclusion}
+    \begin{description}
+    \item[Chapter 5:] \textbf{Evaluation}
+    \item[Chapter 6:] \textbf{Conclusion and Future Work}
+    \end{description}
+\item[Part IV:] \textbf{Appendices}
+    \begin{description}
+    \item[Appendix A:] \textbf{Sample Selection}
+    \item[Appendix B:] \textbf{Survey Data}
+    \item[Appendix C:] \textbf{Analysis Code}
+    \end{description}
+\end{description}
 
 \cleardoublepage
